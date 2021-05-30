@@ -17,7 +17,12 @@ class Menu extends Component {
     }
 
     onselect(dish) {
+        if (this.state.selectdish == null || this.state.selectdish !== dish){
         this.setState({ selectdish : dish});
+    }
+    else{
+        this.setState({ selectdish : null});
+    }
     }
 
     
